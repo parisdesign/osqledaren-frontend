@@ -6,7 +6,7 @@ import { Category } from '../utils/types';
 import theme from '../styles/theme';
 
 const Filterbar: FunctionComponent = () => {
-  const {
+  /*const {
     allSanityCategory,
   }: {
     allSanityCategory: { edges: Array<{ node: Category }> };
@@ -20,10 +20,10 @@ const Filterbar: FunctionComponent = () => {
         }
       }
     }
-  `);
+  `);*/
   return (
     <Bar>
-      {allSanityCategory.edges
+      {/* {allSanityCategory.edges
         .filter(({ node }) => node.menu)
         .sort((a, b) => a.node.order - b.node.order)
         .map(({ node }) => (
@@ -33,7 +33,33 @@ const Filterbar: FunctionComponent = () => {
             name={node.title}
             background={node.color.hex}
           ></FilterButton>
-        ))}
+        ))} */}
+
+      <FilterButton
+        to="/samhalle"
+        name="Samhälle"
+        background={theme.colors.branch}
+      ></FilterButton>
+      <FilterButton
+        to="/kultur"
+        name="Kultur"
+        background={theme.colors.english}
+      ></FilterButton>
+      <FilterButton
+        to="/ol-graever"
+        name="OL Gräver"
+        background={theme.colors.olGraver}
+      ></FilterButton>
+      <FilterButton
+        to="/underhallning"
+        name="Underhållning"
+        background={theme.colors.underhallning}
+      ></FilterButton>
+      <FilterButton
+        to="/pa-campus"
+        name="På Campus"
+        background={theme.colors.aktuellt}
+      ></FilterButton>
       <FilterButton
         to="/podcasts"
         name="Podcasts"

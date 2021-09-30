@@ -24,7 +24,7 @@ const ContentFeed: FC<Props> = ({ content }) => {
             to={
               node.slug.current === 'about' ||
               node.slug.current === 'advertise' ||
-              node.slug.current === 'subscribe' ||
+              node.slug.current === 'insandare' ||
               node.slug.current === 'podcast'
                 ? '/' + node.slug.current
                 : getArticleSlug(node.category.slug.current, node.slug.current)

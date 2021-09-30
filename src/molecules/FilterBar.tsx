@@ -66,8 +66,8 @@ const Filterbar: FunctionComponent = () => {
         background={theme.colors.podcast}
       ></FilterButton>
       <FilterButton
-        to="/subscribe"
-        name="subscribe"
+        to="/insandare"
+        name="Insändare"
         background={theme.colors.subscribe}
       ></FilterButton>
     </Bar>

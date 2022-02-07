@@ -14,13 +14,22 @@ const Subscribe: FunctionComponent = () => {
           <TipsText>
             <H variant="3">Skicka in tips till Osqledaren!</H>
             <P>
-              Det går utmärkt att maila oss på osqledaren@ths.se om du har ett
-              tips rörande något vi kan skriva om i tidningen.
+              Det går utmärkt att kontakta oss på osqledaren@ths.kth.se eller 08
+              790 98 88 om du har ett tips rörande något vi kan skriva om i
+              tidningen.
             </P>
             <H variant="4">Insändare</H>
             <P>
               Vill du istället skriva en insändare till tidningen? Följ
-              instruktionerna <Link to="/insandare">här</Link>.
+              instruktionerna{' '}
+              <a
+                href="https://docs.google.com/document/d/1bIo8LqcSZzrZMCEG1R0_nQvBQuTCY5o9LpmodeoE8PI/"
+                target="_blank"
+                rel="noreferrer"
+              >
+                här
+              </a>
+              . Englishinstructions available further down in the document.
             </P>
           </TipsText>
         </TipsContainer>

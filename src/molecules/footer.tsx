@@ -22,9 +22,6 @@ const Footer: FunctionComponent = () => {
         <ExternalLink to="https://www.instagram.com/osqledaren/">
           <SocialIcon src={instagram} />
         </ExternalLink>
-        <ExternalLink to="https://twitter.com/osqledaren">
-          <SocialIcon src={twitter} />
-        </ExternalLink>
         <ExternalLink to="https://github.com/osqledaren">
           <SocialIcon src={github} />
         </ExternalLink>

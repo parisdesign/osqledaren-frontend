@@ -1,4 +1,5 @@
 import React, { FunctionComponent } from 'react';
+import { Link } from 'gatsby';
 import Layout from '../organisms/Layout';
 import InfoWrapper from '../molecules/InfoWrapper';
 import styled from '../styles/styled';
@@ -15,6 +16,11 @@ const Subscribe: FunctionComponent = () => {
             <P>
               Det går utmärkt att maila oss på osqledaren@ths.se om du har ett
               tips rörande något vi kan skriva om i tidningen.
+            </P>
+            <H variant="4">Insändare</H>
+            <P>
+              Vill du istället skriva en insändare till tidningen? Följ
+              instruktionerna <Link to="/insandare">här</Link>.
             </P>
           </TipsText>
         </TipsContainer>

@@ -9,7 +9,7 @@ const theme = {
     underhallning: '#f5c832',
     aktuellt: '#d51217',
     podcast: '#606263',
-    subscribe: '#673ab7',
+    subscribe: '#000000',
   },
   contentWidth: 1000,
   hSize: {

@@ -1,4 +1,6 @@
 import React, { FC } from 'react';
+import { useStaticQuery, graphql } from 'gatsby';
+import { Episode } from '../utils/types';
 import Layout from '../organisms/Layout';
 import { Article } from '../utils/types';
 import InfoWrapper from '../molecules/InfoWrapper';
@@ -20,6 +22,26 @@ interface Props {
   };
 }
 
+// const {
+//   allPodcastEpisode,
+// }: {
+//   allPodcastEpisode: {
+//     edges: Array<{
+//       node: Episode;
+//     }>;
+//   };
+// } = useStaticQuery(graphql`
+//   query {
+//     allPodcastEpisode(limit: 100) {
+//       edges {
+//         node {
+//           ...Episode
+//         }
+//       }
+//     }
+//   }
+// `);
+
 const episodeIds = [
   '7wOAce2SReVmZr4vnTawyd',
   '5Zvd2LGCh4m3yGUbgutZv9',
@@ -34,13 +56,17 @@ const Podcasts: FC<Props> = () => (
       <PodcastContainer>
         <PodcastText>
           <H variant="3">Podcasts</H>
-          <P>
-            Here you can listen to Osqledaren's podcasts:
-            </P>
+          <P>Here you can listen to Osqledaren's podcasts:</P>
         </PodcastText>
         {episodeIds.map(episodeId => (
           <PodcastItem key={episodeId}>
-            <iframe src={`https://open.spotify.com/embed-podcast/episode/${episodeId}`} width="100%" height="232" frameBorder="0" allow="encrypted-media"></iframe>
+            <iframe
+              src={`https://open.spotify.com/embed-podcast/episode/${episodeId}`}
+              width="100%"
+              height="232"
+              frameBorder="0"
+              allow="encrypted-media"
+            ></iframe>
           </PodcastItem>
         ))}
         <P></P>

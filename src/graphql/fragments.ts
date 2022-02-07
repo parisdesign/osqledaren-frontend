@@ -54,3 +54,10 @@ export const categoryFragment = graphql`
     order
   }
 `;
+
+// export const episodeFragment = graphql`
+//   fragment Episode on PodcastEpisode {
+//     title
+//     id
+//   }
+// `;

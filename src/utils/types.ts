@@ -41,6 +41,11 @@ export interface Contribution {
   role: Role;
 }
 
+// export interface Episode {
+//   name: string;
+//   id: string;
+// }
+
 export interface Article {
   slug: Slug;
   mainImage: SanityImageFluid;

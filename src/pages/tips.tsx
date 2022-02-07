@@ -29,7 +29,7 @@ const Subscribe: FunctionComponent = () => {
               >
                 här
               </a>
-              . Englishinstructions available further down in the document.
+              . English instructions are available further down in the document.
             </P>
           </TipsText>
         </TipsContainer>

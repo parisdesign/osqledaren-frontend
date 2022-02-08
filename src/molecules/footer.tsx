@@ -4,7 +4,7 @@ import styled from '../styles/styled';
 import P from '../atoms/P';
 import ExternalLink from '../atoms/Link';
 import OlLogo from '../images/OL-logga-vit.png';
-import twitter from '../images/twitter-white.png';
+//import twitter from '../images/twitter-white.png';
 import facebook from '../images/facebook.png';
 import instagram from '../images/instagram.png';
 import github from '../images/github.png';
@@ -22,9 +22,6 @@ const Footer: FunctionComponent = () => {
         <ExternalLink to="https://www.instagram.com/osqledaren/">
           <SocialIcon src={instagram} />
         </ExternalLink>
-        <ExternalLink to="https://twitter.com/osqledaren">
-          <SocialIcon src={twitter} />
-        </ExternalLink>
         <ExternalLink to="https://github.com/osqledaren">
           <SocialIcon src={github} />
         </ExternalLink>
@@ -37,12 +34,13 @@ const Footer: FunctionComponent = () => {
           <PageLink to="/advertise">
             <P color="white">Annonsera</P>
           </PageLink>
-          <ExternalLink to="http://archive.osqledaren.se">
-            <UnderlineP color="white">Arkiv</UnderlineP>
+          <ExternalLink to="https://docs.google.com/document/d/1bIo8LqcSZzrZMCEG1R0_nQvBQuTCY5o9LpmodeoE8PI/">
+            <UnderlineP color="white">Insändare</UnderlineP>
           </ExternalLink>
         </Links>
         <P size="16pt" color="white">
-          Ansvarig utgivare: Cornelia Thane <br />© 2008 - 2020 Osqledaren.
+          Ansvarig utgivare: Carl Housten <br />© 2008 -{' '}
+          {new Date().getFullYear()} Osqledaren.
         </P>
       </InfoWrapper>
     </FooterWrapper>

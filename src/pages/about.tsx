@@ -43,10 +43,10 @@ const About: FunctionComponent = () => {
             <H variant="3">Kontaktuppgifter</H>
             <ContactList>
               <P>
-                <li>Chefredaktör: Cornelia Thane</li>
+                <li>Chefredaktör: Carl Housten</li>
                 <br />
                 <li>Ansvarig utgivare:</li>
-                <li>Cornelia Thane</li>
+                <li>Carl Housten</li>
                 <li>
                   <a href="tel:087909888">08 79 09 888</a>
                 </li>
@@ -61,9 +61,9 @@ const About: FunctionComponent = () => {
               </P>
             </ContactList>
           </Contact>
-          <ImageWrapper>
+          {/* <ImageWrapper>
             <Img fluid={data.staff.childImageSharp.fluid} />
-          </ImageWrapper>
+          </ImageWrapper> */}
         </AboutContainer>
       </InfoWrapper>
     </Layout>

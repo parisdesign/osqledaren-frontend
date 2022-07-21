@@ -43,7 +43,7 @@ const About: FunctionComponent = () => {
             <H variant="3">Kontaktuppgifter</H>
             <ContactList>
               <P>
-                <li>Chefredaktör: Carl Housten</li>
+                <li>Chefredaktör: Benjamin Javitz</li>
                 <br />
                 <li>Ansvarig utgivare:</li>
                 <li>Carl Housten</li>

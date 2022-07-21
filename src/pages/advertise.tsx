@@ -40,8 +40,9 @@ const Advertise: FunctionComponent = () => (
             <P>
               Vill ni annonsera i Osqledaren? <br></br>
               <b>
-                Maila vår annonsbyrå FörbundsMedia AB:{' '}
-                Ricard Sjöberg
+                Maila vår annonsbyrå:{' '}<br></br>
+                FörbundsMedia AB<br></br>
+                Ricard Sjöberg<br></br>
                 <a href="mailto:ricard.sjoberg@fbmedia.se">ricard.sjoberg@fbmedia.se</a>{' '}
               </b>
             </P>

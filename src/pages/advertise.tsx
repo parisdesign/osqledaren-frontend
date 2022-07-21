@@ -41,6 +41,7 @@ const Advertise: FunctionComponent = () => (
               Vill ni annonsera i Osqledaren? <br></br>
               <b>
                 Maila vår annonsbyrå FörbundsMedia AB:{' '}
+                Ricard Sjöberg
                 <a href="mailto:ricard.sjoberg@fbmedia.se">ricard.sjoberg@fbmedia.se</a>{' '}
               </b>
             </P>
@@ -105,30 +106,30 @@ const Advertise: FunctionComponent = () => (
           </Sections>
         </Physical>
         <Plan>
-          <H variant="3">Utgivningsplan 2020/2021</H>
+          <H variant="3">Utgivningsplan 2022/2023</H>
           <Dates>
             <Date>
               <H variant="4">Utgåva 1</H>
               <P size="17" lh="22">
-                Manusstopp: 16/9 {<br />} Utgivning: 6/10
+                Säljstopp 07/10-22 {<br />} Utgivning 07/11-22
               </P>
             </Date>
             <Date>
               <H variant="4">Utgåva 2</H>
               <P size="17" lh="22">
-                Manusstopp: 21/10 {<br />} Utgivning: 12/11
+                Säljstopp 07/12-22 {<br />} Utgivning 11/01-23
               </P>
             </Date>
             <Date>
               <H variant="4">Utgåva 3</H>
               <P size="17" lh="22">
-                Manusstopp: 26/1 {<br />} Utgivning: 13/2
+                Säljstopp 23/02-23 {<br />} Utgivning 23/03-23
               </P>
             </Date>
             <Date>
               <H variant="4">Utgåva 4</H>
               <P size="17" lh="22">
-                Manusstopp: 14/4 {<br />} Utgivning: 4/5
+                Säljstopp 04/05-23 {<br />} Utgivning 01/06-23
               </P>
             </Date>
           </Dates>

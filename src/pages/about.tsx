@@ -27,7 +27,7 @@ const About: FunctionComponent = () => {
             <H variant="3">Om Osqledaren</H>
             <P>
               Osqledaren är Tekniska Högskolans Studentkårs tidning som når ut
-              till alla KTHs kårmedlemmar i cirka 100 000 exemplar, fyra gånger
+              till alla KTHs kårmedlemmar i cirka 10 000 exemplar, fyra gånger
               per läsår. Tidningen har till uppgift att bevaka kåren och KTH,
               men skriver också om andra ämnen som kan vara intressanta för
               teknologstudenter; som till exempel nöje, teknik, karriär och

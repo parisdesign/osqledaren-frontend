@@ -39,7 +39,7 @@ const Footer: FunctionComponent = () => {
           </ExternalLink>
         </Links>
         <P size="16pt" color="white">
-          Ansvarig utgivare: Carl Housten <br />© 2008 -{' '}
+          Ansvarig utgivare: Benjamin Javitz <br />© 2008 -{' '}
           {new Date().getFullYear()} Osqledaren.
         </P>
       </InfoWrapper>

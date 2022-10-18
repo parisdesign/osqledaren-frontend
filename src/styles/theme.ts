@@ -2,7 +2,7 @@
 const theme = {
   colors: {
     primary: 'green',
-    background: '#f4f4f4',
+    background: '#000000',
     branch: '#dc702d',
     english: '#374e9b',
     olGraver: '#008247',

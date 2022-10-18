@@ -1,5 +1,5 @@
 import React, { FunctionComponent } from 'react';
-import logo from '../images/TestHeader.gif'; //Osqledaren_logga_svart.png
+import logo from '../images/Osqledaren_logga_svart.png'; //Osqledaren_logga_svart.png
 import styled from '../styles/styled';
 import { Link } from 'gatsby';
 

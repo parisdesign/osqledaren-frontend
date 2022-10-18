@@ -7,6 +7,7 @@ const Header: FunctionComponent = () => {
   return (
     <HeaderWrapper to="/">
       <HeaderImage src={logo} />
+      <HeaderImage src={logo} />
     </HeaderWrapper>
   );
 };

@@ -1,15 +1,12 @@
-import React, { FunctionComponent } from 'react';
-import Layout from '../organisms/Layout';
-import ContentFeed from '../organisms/ContentFeed';
-import { useStaticQuery, graphql } from 'gatsby';
-import { Article } from '../utils/types';
-import ContentWrapper from '../molecules/ContentWrapper';
-import { useMemo } from 'react';
-import { useState } from 'react';
-import styled from '../styles/styled';
+import { graphql, useStaticQuery } from 'gatsby';
+import React, { FunctionComponent, useMemo, useState } from 'react';
 import { Button } from '../molecules/Button';
+import ContentWrapper from '../molecules/ContentWrapper';
+import ContentFeed from '../organisms/ContentFeed';
+import Layout from '../organisms/Layout';
+import { Article } from '../utils/types';
 
-const Index: FunctionComponent = () => {
+const useContent = () => {
   const [limit, setLimit] = useState(5);
 
   const { allSanityArticle } = useStaticQuery<{
@@ -30,7 +27,7 @@ const Index: FunctionComponent = () => {
     }
   `);
 
-  const increaseLimit = () => setLimit(l => l + 5);
+  const nextPage = () => setLimit(l => l + 5);
 
   const content = useMemo(() => allSanityArticle.edges.slice(0, limit), [
     limit,
@@ -39,11 +36,17 @@ const Index: FunctionComponent = () => {
 
   const hasMore = allSanityArticle.edges.length >= limit;
 
+  return { hasMore, content, nextPage };
+};
+
+const Index: FunctionComponent = () => {
+  const { content, hasMore, nextPage } = useContent();
+
   return (
     <Layout>
       <ContentWrapper>
         <ContentFeed content={content} />
-        {hasMore && <Button onClick={increaseLimit}>{'Läs mer'}</Button>}
+        {hasMore && <Button onClick={nextPage}>{'Läs mer'}</Button>}
       </ContentWrapper>
     </Layout>
   );

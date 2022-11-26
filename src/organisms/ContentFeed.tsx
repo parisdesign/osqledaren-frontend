@@ -1,4 +1,4 @@
-import React, { FC, useMemo } from 'react';
+import React, { FC } from 'react';
 import { Article } from '../utils/types';
 import ArticleCard from '../molecules/ArticleCard';
 import { getArticleSlug } from '../utils/slug';

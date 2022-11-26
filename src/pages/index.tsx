@@ -1,6 +1,6 @@
 import { graphql, useStaticQuery } from 'gatsby';
 import React, { FunctionComponent, useMemo, useState } from 'react';
-import { Button } from '../molecules/Button';
+import { ReadMoreButton } from '../molecules/ReadMoreButton';
 import ContentWrapper from '../molecules/ContentWrapper';
 import ContentFeed from '../organisms/ContentFeed';
 import Layout from '../organisms/Layout';
@@ -46,7 +46,9 @@ const Index: FunctionComponent = () => {
     <Layout>
       <ContentWrapper>
         <ContentFeed content={content} />
-        {hasMore && <Button onClick={nextPage}>{'Läs mer'}</Button>}
+        {hasMore && (
+          <ReadMoreButton onClick={nextPage}>{'Läs mer'}</ReadMoreButton>
+        )}
       </ContentWrapper>
     </Layout>
   );

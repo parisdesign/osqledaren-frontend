@@ -17,7 +17,7 @@ const useContent = () => {
     };
   }>(graphql`
     query {
-      allSanityArticle(limit: 100, sort: { fields: _createdAt, order: DESC }) {
+      allSanityArticle(limit: 100, sort: { fields: publishDate, order: DESC }) {
         edges {
           node {
             ...Article

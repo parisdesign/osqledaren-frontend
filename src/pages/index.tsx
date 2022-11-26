@@ -32,16 +32,18 @@ const Index: FunctionComponent = () => {
 
   const increaseLimit = () => setLimit(l => l + 5);
 
-  const content = useMemo(
-    () => allSanityArticle.edges.slice(0, limit > 100 ? 100 : limit),
-    [limit, allSanityArticle.edges]
-  );
+  const content = useMemo(() => allSanityArticle.edges.slice(0, limit), [
+    limit,
+    allSanityArticle.edges,
+  ]);
+
+  const hasMore = allSanityArticle.edges.length >= limit;
 
   return (
     <Layout>
       <ContentWrapper>
         <ContentFeed content={content} />
-        <Button onClick={increaseLimit}>{'Läs mer'}</Button>
+        {hasMore && <Button onClick={increaseLimit}>{'Läs mer'}</Button>}
       </ContentWrapper>
     </Layout>
   );

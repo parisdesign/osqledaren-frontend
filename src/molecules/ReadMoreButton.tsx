@@ -9,9 +9,9 @@ export const ReadMoreButton = typedStyled.button`
   padding: 5px;
   width: 160px;
   max-width: 35vw;
-  height: 2vw;
+  height: 3vw;
   border-width: 0px;
-  font-size: 0.8vw;
+  font-size: 1vw;
   text-transform: uppercase;
   box-shadow: 3px 4px 4px rgba(0, 0, 0, 0.25);
   hyphens: auto;
@@ -30,9 +30,10 @@ export const ReadMoreButton = typedStyled.button`
   word-break: break-all;
   @media (max-width: ${({ theme }) => theme.breakpoints.xl + 'px'}) {
     height: 4vw;
+    font-size: 1vw;
   }
   @media (max-width: ${({ theme }) => theme.breakpoints.sm + 'px'}) {
-    font-size: 1vw;
+    font-size: 3vw;
     height: 7vw;
   }
 `;

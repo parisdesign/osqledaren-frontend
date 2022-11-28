@@ -8,6 +8,7 @@ export const ReadMoreButton = typedStyled.button`
   cursor: pointer;
   padding: 5px;
   width: 160px;
+  max-width: 35vw;
   height: 2vw;
   border-width: 0px;
   font-size: 0.8vw;
@@ -28,10 +29,10 @@ export const ReadMoreButton = typedStyled.button`
   line-height: 12px;
   word-break: break-all;
   @media (max-width: ${({ theme }) => theme.breakpoints.xl + 'px'}) {
-    font-size: 1vw;
+    height: 4vw;
   }
   @media (max-width: ${({ theme }) => theme.breakpoints.sm + 'px'}) {
+    font-size: 1vw;
     height: 7vw;
-    font-size: 0.5em;
   }
 `;

@@ -1,22 +1,23 @@
-import React, { FunctionComponent } from 'react';
-import Layout from '../organisms/Layout';
-import ContentFeed from '../organisms/ContentFeed';
-import { useStaticQuery, graphql } from 'gatsby';
-import { Article } from '../utils/types';
+import { graphql, useStaticQuery } from 'gatsby';
+import React, { FunctionComponent, useMemo, useState } from 'react';
+import { ReadMoreButton } from '../molecules/ReadMoreButton';
 import ContentWrapper from '../molecules/ContentWrapper';
+import ContentFeed from '../organisms/ContentFeed';
+import Layout from '../organisms/Layout';
+import { Article } from '../utils/types';
 
-const Index: FunctionComponent = () => {
-  const {
-    allSanityArticle,
-  }: {
+const useContent = () => {
+  const [limit, setLimit] = useState(5);
+
+  const { allSanityArticle } = useStaticQuery<{
     allSanityArticle: {
-      edges: Array<{
+      edges: {
         node: Article;
-      }>;
+      }[];
     };
-  } = useStaticQuery(graphql`
+  }>(graphql`
     query {
-      allSanityArticle(limit: 100) {
+      allSanityArticle(limit: 100, sort: { fields: publishDate, order: DESC }) {
         edges {
           node {
             ...Article
@@ -25,10 +26,29 @@ const Index: FunctionComponent = () => {
       }
     }
   `);
+
+  const nextPage = () => setLimit(l => l + 5);
+
+  const content = useMemo(() => allSanityArticle.edges.slice(0, limit), [
+    limit,
+    allSanityArticle.edges,
+  ]);
+
+  const hasMore = allSanityArticle.edges.length >= limit;
+
+  return { hasMore, content, nextPage };
+};
+
+const Index: FunctionComponent = () => {
+  const { content, hasMore, nextPage } = useContent();
+
   return (
     <Layout>
       <ContentWrapper>
-        <ContentFeed content={allSanityArticle.edges} />
+        <ContentFeed content={content} />
+        {hasMore && (
+          <ReadMoreButton onClick={nextPage}>{'Läs mer'}</ReadMoreButton>
+        )}
       </ContentWrapper>
     </Layout>
   );

@@ -27,4 +27,11 @@ export const ReadMoreButton = typedStyled.button`
   letter-spacing: 1px;
   line-height: 12px;
   word-break: break-all;
+  @media (max-width: ${({ theme }) => theme.breakpoints.xl + 'px'}) {
+    font-size: 1vw;
+  }
+  @media (max-width: ${({ theme }) => theme.breakpoints.sm + 'px'}) {
+    height: 7vw;
+    font-size: 0.5em;
+  }
 `;

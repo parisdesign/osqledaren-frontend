@@ -99,7 +99,7 @@ const Advertise: FunctionComponent = () => (
               <SectionContent>
                 <img src={QuarterPage}></img>
                 <P size="18">
-                  Stående: 52 x 67,5 mm <br />
+                  Stående: 104 x 135 mm <br />
                   <b>10 000 kr</b>
                 </P>
               </SectionContent>

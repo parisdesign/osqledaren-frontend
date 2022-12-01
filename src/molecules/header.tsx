@@ -7,6 +7,7 @@ const Header: FunctionComponent = () => {
   return (
     <HeaderWrapper to="/">
       <HeaderImage src={logo} />
+      <HeaderImage src={logo} />
     </HeaderWrapper>
   );
 };
@@ -19,7 +20,7 @@ const HeaderWrapper = styled(Link)`
 
   /* VW Heights below set fix a flickering issue in Safari by making HeaderWrappers height static. 
   Calculated like this: height = % width of HeaderImage / 3.3 (The ratio of the sides of the logo)*/
-  height: 10.6vw;
+  height: 21.2vw;
   @media (max-width: ${({ theme }) => theme.breakpoints.xl + 'px'}) {
     height: 15.15vw;
   }
